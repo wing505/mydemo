@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        SQLite Demo
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content >
+  
+   <div padding>
+  
+      <button ion-button block (click)="initDB()">
+        initDB
+      </button>
+  
+      <ion-list margin-top>
+          <ion-item>
+            <ion-label color="primary">Key</ion-label>
+            <ion-input type="text" [(ngModel)]="key" placeholder="Enter Key"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label color="primary">Message</ion-label>
+            <ion-input type="text" [(ngModel)]="content" placeholder="Enter Message"></ion-input>
+          </ion-item>
+      </ion-list>
+      
+      <button ion-button (click)="insert()" [disabled]= "key=='' && content==''">
+        Inset
+      </button>
+    
+      <button ion-button (click)="update()" [disabled]= "key=='' && content==''">
+        Update
+      </button>
+    
+      <button ion-button (click)="detele()" [disabled]= "key==''">
+        Detele
+      </button>
+    
+      <button ion-button (click)="query()">
+        Query
+      </button>
+    
+      <p margin-top>
+        Result Data:{{result_length}}
+      </p>
+   </div>
+  
+   <ion-grid>
+     <ion-row>
+       <ion-col col-2 text-center style="border-bottom:1px solid #d5d5d5;">Key</ion-col>
+       <ion-col col-10 text-center style="border-bottom:1px solid #d5d5d5;">Message</ion-col>
+     </ion-row>
+  
+    <ion-row *ngFor="let item of message;let i=index">
+      <ion-col col-2 text-center style="border-bottom:1px solid #d5d5d5;">{{item.key}}</ion-col>
+      <ion-col col-10 text-center style="border-bottom:1px solid #d5d5d5;">{{item.content}}</ion-col>
+    </ion-row>
+   </ion-grid>
+  
+  </ion-content>
+  

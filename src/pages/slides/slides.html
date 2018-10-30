@@ -1,0 +1,31 @@
+<!--
+  Generated template for the SlidesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>輪播圖自適應</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div style="height:60vw">
+      <ion-slides *ngIf="images.length > 0" pager="true" loop="true" style="width:100%;height:60vw !important;">
+        <ion-slide *ngFor="let item of images;let i=index;">
+
+            <div style="height: 60vw !important;overflow: hidden;display: flex;align-items: center;">
+              <div style="width: 100%;height:100vw;display: flex;align-items: center;">
+                  <img  src="{{item}}" style="width:100%;">
+              </div>
+            </div>
+
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+</ion-content>

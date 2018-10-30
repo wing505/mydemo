@@ -1,0 +1,25 @@
+page-header-gradient {
+    ion-header {
+        .toolbar {
+          position: absolute;
+          .toolbar-background {
+            background: transparent;
+          }
+          .toolbar-title {
+            color: #222;
+          }
+        }
+    }
+
+    .btn-cls{
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 18px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+
+    .bar-button-ios[icon-only] {
+      min-width: 36px;
+  }
+}

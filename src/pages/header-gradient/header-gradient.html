@@ -1,0 +1,31 @@
+<ion-header no-border>
+    <ion-navbar #header  hideBackButton="true">
+      <ion-buttons left>
+        <button ion-button icon-only class="navbar-btn btn-cls" navPop>
+          <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title></ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only class="navbar-btn btn-cls">
+          <ion-icon name="share"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content fullscreen (ionScroll)="scrollEvent($event)">
+  
+    <img src="assets/imgs/test.jpg">
+  
+    <div padding>
+        <ion-list>
+          <ion-item *ngFor="let item of list;">
+            {{item}}
+          </ion-item>
+        </ion-list>
+    </div>
+  
+    
+  </ion-content>
+  
